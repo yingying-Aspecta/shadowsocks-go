@@ -5,7 +5,7 @@ Shadowsocks-go multiple user port.
 
 ### Require 
 
-* Redis
+* Redis >= 3.0
 
 
 ### Install
@@ -33,9 +33,9 @@ cp examlple.conf config.conf
 ```
 
 
-### Etc
+### known issue
+
+* mysql mode cant update traffic
 
 
-### TODO
-
-* web api support
+ 

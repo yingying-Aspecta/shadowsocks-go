@@ -36,8 +36,8 @@ func boot() {
 	Log.Info(len(users))
 	// clear storage
 	storage.ClearAll()
-	//bootUsers(users)
-	//time.Sleep(muconfig.Conf.Base.CheckTime * time.Second)
+	bootUsers(users)
+	time.Sleep(muconfig.Conf.Base.CheckTime * time.Second)
 
 	go func() {
 		for {
@@ -101,6 +101,8 @@ func bootUsers(users []user.User) {
 			continue
 		}
 		go runWithCustomMethod(user)
+		// 首次启动睡眠
+		time.Sleep(100 * time.Millisecond)
 	}
 }
 

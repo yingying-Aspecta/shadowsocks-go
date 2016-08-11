@@ -3,9 +3,11 @@ package web
 import (
 	"encoding/json"
 	"errors"
-	"github.com/orvice/shadowsocks-go/mu/log"
-	"github.com/orvice/shadowsocks-go/mu/system"
-	"github.com/orvice/shadowsocks-go/mu/user"
+
+	"github.com/golang/glog"
+	"shadowsocks/shadowsocks-go/mu/log"
+	"shadowsocks/shadowsocks-go/mu/system"
+	"shadowsocks/shadowsocks-go/mu/user"
 )
 
 var (
@@ -46,6 +48,7 @@ func (c *Client) setNodeId(id int) {
 
 func (c *Client) GetUsers() ([]user.User, error) {
 	var tempUser []user.User
+	glog.Infoln("request to remote server:", c.genGetUsersUrl())
 	res, err := c.httpGet(c.genGetUsersUrl())
 	if err != nil {
 		return tempUser, err

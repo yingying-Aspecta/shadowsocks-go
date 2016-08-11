@@ -1,7 +1,7 @@
 package user
 
 import (
-	ss "github.com/shadowsocks/shadowsocks-go/shadowsocks"
+	ss "shadowsocks/shadowsocks-go/shadowsocks"
 )
 
 var (
@@ -32,7 +32,7 @@ type User interface {
 	GetPasswd() string
 	GetMethod() string
 	IsEnable() bool
-	GetCipher() (*ss.Cipher, error)
+	GetCipher() (*ss.Cipher, error, bool)
 	UpdateTraffic(storageSize int) error
 	GetUserInfo() UserInfo
 }

@@ -1,7 +1,9 @@
 language: go
 go:
-  - 1.5.3
+  - 1.6
+  - 1.6.3
 install:
+  - go get github.com/tools/godep
   - go get golang.org/x/crypto/blowfish
   - go get golang.org/x/crypto/cast5
   - go get golang.org/x/crypto/salsa20
@@ -14,8 +16,7 @@ install:
   - go get gopkg.in/redis.v3
   - go get github.com/cyfdecyf/leakybuf
   - go get github.com/lib/pq
-  - go install ./mu
 script:
-  - cd mu && go build
-  - go test -cover ./...
+  - cd mu && godep go build
+  - godep go test -cover ./...
 sudo: required

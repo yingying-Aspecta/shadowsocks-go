@@ -1,7 +1,10 @@
 language: go
 go:
+  - 1.4
+  - 1.5
   - 1.6
   - 1.6.3
+  - 1.7
 install:
   - go get github.com/tools/godep
   - go get golang.org/x/crypto/blowfish
@@ -15,8 +18,7 @@ install:
   - go get gopkg.in/redis.v3
   - go get github.com/cyfdecyf/leakybuf
   - go get github.com/lib/pq
-script:
-  - godep restore
-  - cd mu && godep go build
-  - godep go test -cover ./...
+script: 
+  - cd mu && go build
+  - go test -cover ./...
 sudo: required

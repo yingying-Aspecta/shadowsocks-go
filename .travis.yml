@@ -18,6 +18,7 @@ install:
   - go get gopkg.in/redis.v3
   - go get github.com/cyfdecyf/leakybuf
   - go get github.com/lib/pq
+  - go get github.com/golang/glog
 script: 
   - cd mu && go build
   - go test -cover ./...

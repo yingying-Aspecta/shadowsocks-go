@@ -7,8 +7,7 @@ install:
   - go get golang.org/x/crypto/blowfish
   - go get golang.org/x/crypto/cast5
   - go get golang.org/x/crypto/salsa20
-  - go get github.com/codahale/chacha20
-  - go get shadowsocks/shadowsocks-go/shadowsocks
+  - go get github.com/codahale/chacha20 
   - go get github.com/Sirupsen/logrus
   - go get github.com/Terry-Mao/goconf
   - go get github.com/go-sql-driver/mysql
@@ -17,6 +16,7 @@ install:
   - go get github.com/cyfdecyf/leakybuf
   - go get github.com/lib/pq
 script:
+  - godep restore
   - cd mu && godep go build
   - godep go test -cover ./...
 sudo: required

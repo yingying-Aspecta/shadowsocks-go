@@ -1,5 +1,5 @@
 /**
-@author orvice   https://shadowsocks/shadowsocks-go
+@author orvice   https://github.com/orvice/shadowsocks-go
 @author Lupino   https://github.com/Lupino/shadowsocks-auth
 */
 
@@ -11,8 +11,8 @@ import (
 	"encoding/binary"
 	"fmt"
 	"github.com/cyfdecyf/leakybuf"
-	"shadowsocks/shadowsocks-go/mu/user"
-	ss "shadowsocks/shadowsocks-go/shadowsocks"
+	"github.com/orvice/shadowsocks-go/mu/user"
+	ss "github.com/orvice/shadowsocks-go/shadowsocks"
 	"io"
 	"net"
 	"net/http"

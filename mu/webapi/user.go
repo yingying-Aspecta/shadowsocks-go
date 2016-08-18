@@ -4,8 +4,8 @@ import (
 	"strconv"
 	"strings"
 
-	"shadowsocks/shadowsocks-go/mu/user"
-	ss "shadowsocks/shadowsocks-go/shadowsocks"
+	"github.com/orvice/shadowsocks-go/mu/user"
+	ss "github.com/orvice/shadowsocks-go/shadowsocks"
 )
 
 type User struct {

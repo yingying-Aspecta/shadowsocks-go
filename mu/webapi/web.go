@@ -5,9 +5,9 @@ import (
 	"errors"
 
 	"github.com/golang/glog"
-	"shadowsocks/shadowsocks-go/mu/log"
-	"shadowsocks/shadowsocks-go/mu/system"
-	"shadowsocks/shadowsocks-go/mu/user"
+	"github.com/orvice/shadowsocks-go/mu/log"
+	"github.com/orvice/shadowsocks-go/mu/system"
+	"github.com/orvice/shadowsocks-go/mu/user"
 )
 
 var (

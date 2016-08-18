@@ -7,9 +7,9 @@ import (
 	"time"
 
 	"github.com/golang/glog"
-	muconfig "shadowsocks/shadowsocks-go/mu/config"
-	"shadowsocks/shadowsocks-go/mu/user"
-	ss "shadowsocks/shadowsocks-go/shadowsocks"
+	muconfig "github.com/orvice/shadowsocks-go/mu/config"
+	"github.com/orvice/shadowsocks-go/mu/user"
+	ss "github.com/orvice/shadowsocks-go/shadowsocks"
 )
 
 var configFile string

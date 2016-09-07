@@ -90,20 +90,25 @@ func boot() {
 // 第一次启动
 func bootUsers(users []user.User) {
 	for _, user := range users {
+		var err error
 		Log.Info(user.GetUserInfo())
-		err := storage.StoreUser(user.GetUserInfo())
-		if err != nil {
-			Log.Error(err)
-		}
+
 		isExists, err := storage.Exists(user)
 		if err != nil {
 			Log.Error("check exists error: ", err)
 			continue
 		}
 		if isExists {
+			Log.Info("user is exists....skip...", user.GetPort())
 			continue
 		}
 		go runWithCustomMethod(user)
+
+		err = storage.StoreUser(user.GetUserInfo())
+		if err != nil {
+			Log.Error(err)
+		}
+
 		// 首次启动睡眠
 		time.Sleep(100 * time.Millisecond)
 	}

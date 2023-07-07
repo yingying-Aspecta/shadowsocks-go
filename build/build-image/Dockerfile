@@ -21,3 +21,6 @@ RUN cd /go/src/shadowsocks/shadowsocks-go/ \
 
 
 CMD ["entrypoint.sh"]
+
+
+
